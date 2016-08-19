@@ -1,0 +1,28 @@
+{
+  "name": "mysql",
+  "version": "1.0.0",
+  "description": "Curriculum for mysql portion of JRS Coding School Boot Camp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jrs-innovation-center/bootcamp-mysql.git"
+  },
+  "keywords": [
+    "mysql",
+    "boot",
+    "camp"
+  ],
+  "author": "Trip Ottinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrs-innovation-center/bootcamp-mysql/issues"
+  },
+  "homepage": "https://github.com/jrs-innovation-center/bootcamp-mysql#readme",
+  "dependencies": {
+    "codecampkit": "^2.3.7"
+  }
+}
