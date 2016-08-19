@@ -75,10 +75,22 @@ For example, a person’s first name would be a string.  A person’s last name 
 
 [Demo: CREATE TABLE](/4-create-table/demo-create-table)
 
-Sometimes it is ok to have an unknown or missing value within a column in a table.  Sometimes it isn’t.  When a column is marked at `NOT NULL`, we will not be able enter a `NULL` value into the column.  You test for `NULL` values within your tables by using the `IS NULL` and `IS NOT NULL` operators within a `SELECT` statement. In the `CREATE TABLE` statement in the demo, notice that the `LastName` column was marked with the `NOT NULL` operator.  This means we have to enter a string into this column.  In contrast, the `FirstName` column will allow `NULL`.  
-
-
-
-
-
 ## NOT NULL
+
+Sometimes it is ok to have an unknown or missing value within a column in a table.  Sometimes it isn’t.  When a column is marked at `NOT NULL`, we will not be able enter a `NULL` value into the column.  You test for `NULL` values within your tables by using the `IS NULL` and `IS NOT NULL` operators within a `SELECT` statement.
+
+In the `CREATE TABLE` statement in the demo, notice that the `LastName` column was marked with the `NOT NULL` operator.  This means we have to enter a string into this column.  In contrast, the `FirstName` column will allow `NULL`.  
+
+## Date and Time Data Types
+
+There are different kinds of date and time data types:  `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`.  A date such as July 4, 1776 would be entered into a column with a `DATE` data type as 1776-07-04 or 1776-7-4.  MySQL might seem weird in how it portrays dates but it is in accordance with the ISO standard.  Below is a brief table showing the various Date and Time data types:
+
+![Dates](/static/assets/img/dates.png)
+
+For a birth date, you could use a data type of `DATE`.  If you wanted to just store the year, which is much more space efficient, use a data type of `YEAR(4)`.  This would return the year value back as a 4-digit year.
+
+> When designing your tables, it is VERY important to use as small of a data type as possible for each of your columns.  Efficiently storing data into tables has a huge impact on the overall speed of your database system, especially as the number of records within your tables grow. Be sure to explore date data types further.  There is much more detail to learn for date data types, especially for TIMESTAMP and YEAR data types.
+
+## Exercises
+
+- [Exercise 1](/4-create-table/1)
