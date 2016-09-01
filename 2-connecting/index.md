@@ -4,14 +4,14 @@
 
 When you install MySQL you get a CLI called **mysql**.  Use it to issues commands and queries. [See mysql](http://dev.mysql.com/doc/refman/5.7/en/mysql.html)
 
-To connect to the database server, you will usually need to provide a MySQL user name when you invoke mysql and, most likely, a password. If the server runs on a machine other than the one where you log in, you will also need to specify a host name:
+To connect to the database server, you will usually need to provide a MySQL user name when you invoke mysql and, most likely, a password. You will also need to specify a host name:
 
 ```
-$ mysql -h host -u user -p
+$ mysql -uroot -p -h 0.0.0.0 -P 3306
 Enter password: ********
 ```
 
-- `–h` this is the host where the MySQL Server application is running.  In this course, the MySQL Database Server is your host (local) machine.  Since the host is the same computer from where you are running the mysql program, you can omit the `-h` option.
+- `–h` this is the host where the MySQL Server application is running.  In this course, the MySQL Database Server is running in docker and is available on host `0.0.0.0` and port `3306`.  
 
 - `–u` the MySQL user name of your MySQL account. Substitute appropriate values for your setup. The ******** represents your password; enter it when mysql displays the **Enter password:** prompt.  
 
@@ -21,19 +21,13 @@ Enter password: ********
 
 – `-p` you could provide the password directly as part of the command (be careful! no spaces after –p) BUT for security purpose don’t do this.  By not providing the value for –p, mysql will prompt you for the password without echoing the password to the screen.
 
-If you are logging in on the same machine that MySQL is running on, you can omit the host, and simply use the following:
-
-```
-$ mysql -u user -p
-```
-
-Example:
-```
-$ mysql -u root -p
-Enter password: ********
-```
-
 Once you are logged in, the `mysql>` prompt tells you that mysql is ready for you to enter SQL statements.
+
+- Let's list all the databases on our MySQL database server:
+
+```
+$ show databases;
+```
 
 Quit the **mysql** application (not the server) by entering `quit` at the `mysql>` command prompt.
 
