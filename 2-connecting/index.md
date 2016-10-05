@@ -2,7 +2,7 @@
 
 ## Connecting to the database server
 
-When you install MySQL you get a CLI called **mysql**.  Use it to issues commands and queries. [See mysql](http://dev.mysql.com/doc/refman/5.7/en/mysql.html)
+When you install MySQL you get a command line interface (CLI) called **mysql**.  Use it to issue commands and queries. [See mysql](http://dev.mysql.com/doc/refman/5.7/en/mysql.html)
 
 To connect to the database server, you will usually need to provide a MySQL user name when you invoke mysql and, most likely, a password. You will also need to specify a host name:
 
@@ -19,7 +19,7 @@ Enter password: ********
 
     > If using Unix, this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the –u option.  
 
-– `-p` you could provide the password directly as part of the command (be careful! no spaces after –p) BUT for security purpose don’t do this.  By not providing the value for –p, mysql will prompt you for the password without echoing the password to the screen.
+– `-p` you could provide the password directly as part of the command (be careful! no spaces after `–p`) BUT for security purpose _don’t do this_.  **By not providing the value for –p, mysql will prompt you for the password without echoing the password to the screen.**
 
 Once you are logged in, the `mysql>` prompt tells you that mysql is ready for you to enter SQL statements.
 
@@ -29,7 +29,7 @@ Once you are logged in, the `mysql>` prompt tells you that mysql is ready for yo
 $ show databases;
 ```
 
-Quit the **mysql** application (not the server) by entering `quit` at the `mysql>` command prompt.
+Quit the **mysql** application (not the mysql database server) by entering `quit` at the `mysql>` command prompt.
 
 ```
 mysql> quit
