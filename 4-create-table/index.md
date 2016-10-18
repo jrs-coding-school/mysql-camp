@@ -16,7 +16,7 @@ During the process of defining the user story, begin tracking the names of the t
 
 After you have established some basic entities and attributes, you should begin thinking through the relationships between the entities. Consider the person and hotel room.  We know that a person can ‘book’ a hotel room.  But we need more detail.  In real life can a person book more than one room?  Does a person have to book a room before they can attend an event?  For argument's sake, let's say a person can book more than one room.  We will also not require that person stay at our hotel to attend the event.
 
-Let’s look at the nature of the relationship between person and hotel room from the room’s point of view.  Does a room have to be occupied by a person or can it be vacant? Over time can a room be booked by more than one person?  We know that it is very likely that a room will not be booked all the time, we can have a room without it being booked.  We also know that over time a room will be booked by different people. So a person can book may rooms and a room can be booked by people over time.
+Let’s look at the nature of the relationship between person and hotel room from the room’s point of view.  Does a room have to be occupied by a person or can it be vacant? Over time can a room be booked by more than one person?  We know that it is very likely that a room will not be booked all the time, we can have a room without it being booked.  We also know that over time a room will be booked by different people. So a person can book many rooms and a room can be booked by many people over time.
 
 When a room is booked, what do we want to track in the reservation?  The reservation dates?  The rate?  The lodging tax?  Which entity do we want to use to track the attributes for dates, rate, and tax?  Do these attributes belong with the Person entity or the Hotel Room entity or an entirely new table?   It seems we are uncovering a new entity:  Reservation.  It is within the Reservation entity that attributes such as the person booking, dates, rate, and tax should be kept.
 
@@ -28,13 +28,13 @@ In a relational data model you describe data in the form of tables. Each table c
 
 ![Simple Table](/static/assets/img/simple-table.png)
 
-In a relational database allows you to formally relate tables to one another.  For example, an Orders table could be related to the Customer table.  We could express this relationship verbally by stating “One customer can place one to many Orders”.  Another way to say this would be “A single order is related to a single customer”.  
+A relational database allows you to formally relate tables to one another.  For example, an Orders table could be related to the Customer table.  We could express this relationship verbally by stating “One customer can place one to many Orders”.  Another way to say this would be “A single order is related to a single customer”.  
 
 In order to relate the two tables together. we refer a column in a table to a column within the other table. Below we see the Orders table. See how we copy over the CustomerID from the Customer table to the Orders table?  This begins to establish the relationship between the two tables.
 
 ![Relationship](/static/assets/img/simple-table-relationship.png)
 
-Below is some sample data from Customer and Orders.  Again, note the CustomerID column’s data within the Orders table.  See how the values in this column match in the Customer table?
+Below is some sample data from Customer and Orders.  Again, note the CustomerID column’s data within the Orders table.  Do you see how the values in this column match in the Customer table?
 
 ![Relationship](/static/assets/img/simple-table-relationship-data.png)
 
@@ -67,6 +67,7 @@ For example, a person’s first name would be a string.  A person’s last name 
 `VARCHAR` values are not padded when they are stored.  The basic rule of thumb is if your data length does not change in your column, it is more efficient to use `CHAR`.  If there is variation to the length of your characters in a column, consider using `VARCHAR`.  For example, a Zip code column would be CHAR(5) or CHAR(9) if you wanted to store those weird extra 4 digits at the end.
 
 ## Data Types and Performance
+
 - 	Choosing the correct type to store your data is crucial to getting good performance (Schwartz, Zaitsev, & Tkachenko, 2012)
 - 	Use the smallest data type that can correctly store and represent your data
 - 	Choose the smallest one that you don’t think you’ll exceed
@@ -91,6 +92,7 @@ For a birth date, you could use a data type of `DATE`.  If you wanted to just st
 
 > When designing your tables, it is VERY important to use as small of a data type as possible for each of your columns.  Efficiently storing data into tables has a huge impact on the overall speed of your database system, especially as the number of records within your tables grow. Be sure to explore date data types further.  There is much more detail to learn for date data types, especially for TIMESTAMP and YEAR data types.
 
-## Exercises
+### Exercises 1 and 2
 
 - [Exercise 1](/4-create-table/1)
+- [Exercise 2](/4-create-table/2)

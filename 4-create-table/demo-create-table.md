@@ -1,6 +1,6 @@
 # Demo:  Creating a table
 
-To create a table we use a CREATE TABLE statement.  The syntax is:
+To create a table we use a `CREATE TABLE` SQL statement.  The syntax is:
 
 ```
 mysql> CREATE TABLE table_name (column_listing)
@@ -22,8 +22,3 @@ mysql> CREATE TABLE table_name (column_listing)
 5.	Enter `SHOW DATABASES;` statement to list your databases
 6.	Enter `SHOW TABLES;` statement to list your tables within the `RockStar` database. You should see the `Individual` table listed.
 7.	Enter the statement `SHOW COLUMNS FROM Individual;` Compare the results on your screen to the `CREATE TABLE` statement you entered earlier.  
-8.	Don’t grow too attached to your `Individual` table just yet.  `DROP` the table by issuing the following statement at the mysql> prompt:
-
-  ```
-  mysql> DROP TABLE Individual;
-  ```

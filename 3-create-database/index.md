@@ -6,13 +6,13 @@
 
 The data for your application will live in tables.  These tables, in turn, live inside a database.  MySQL can house many databases, each containing many tables (among other things).  
 
-Creating database is pretty simple. Let's create a database named `test_db`:
+Creating database is pretty simple. Let's connect to the MySQL server using the mysql client and create a database named `test_db`:
 
 ```
 mysql> CREATE DATABASE test_db;
 ```
 
-Before you can _use_ the database, you must select it:
+Before you can _use_ the database, you must select it using `use`.  Ha!:
 
 ```
 mysql> USE test_db;
@@ -40,10 +40,9 @@ Here's an example of a SQL command to create a database named `people` and setti
 $ CREATE DATABASE `people` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
 ```
 
-## Creating a database (Workbench)
+## DEMO: Creating a database using Workbench
 
-
-## Deleting a database
+## DEMO: Deleting a database using Workbench
 
 Delete a database named **delete-me** using the `DROP DATABASE` SQL statement:
 

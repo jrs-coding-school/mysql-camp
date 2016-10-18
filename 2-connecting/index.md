@@ -7,19 +7,32 @@ When you install MySQL you get a command line interface (CLI) called **mysql**. 
 To connect to the database server, you will usually need to provide a MySQL user name when you invoke mysql and, most likely, a password. You will also need to specify a host name:
 
 ```
+$ mysql --user root --password --host 0.0.0.0 --port 3306
+```
+or
+
+```
+$ mysql -u root -p -h 0.0.0.0 -P 3306
+```
+
+Example:
+
+```
 $ mysql -uroot -p -h 0.0.0.0 -P 3306
 Enter password: ********
 ```
 
-- `–h` this is the host where the MySQL Server application is running.  In this course, the MySQL Database Server is running in docker and is available on host `0.0.0.0` and port `3306`.  
+- `--host`, `–h`  Connect to MySQL server on given host where the MySQL Server application is running.  In this course, the MySQL Database Server is your host (local) machine.  Since the host is running in Docker we need to provide a host value of `0.0.0.0`.
 
-- `–u` the MySQL user name of your MySQL account. Substitute appropriate values for your setup. The ******** represents your password; enter it when mysql displays the **Enter password:** prompt.  
+- `--user`, `–u` MySQL user name to use when connecting to server.  If using Unix this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the `–u` option.  For now you will probably want to use the `root` superuser.  
+
+
 
     > Some accounts have the user name `root`. These are superuser accounts that have all privileges and can do anything. When you install MySQL you will be provided with a temporary password for the `root` user.
 
     > If using Unix, this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the –u option.  
 
-– `-p` you could provide the password directly as part of the command (be careful! no spaces after `–p`) BUT for security purpose _don’t do this_.  **By not providing the value for –p, mysql will prompt you for the password without echoing the password to the screen.**
+- `--password`, `–p` you could provide the password directly as part of the command (be careful! no spaces after –p) BUT for security purpose don’t do this.  By not providing the value for the password, **mysql** will prompt you for the password without echoing the password to the screen.
 
 Once you are logged in, the `mysql>` prompt tells you that mysql is ready for you to enter SQL statements.
 
@@ -47,7 +60,7 @@ mysql> SELECT 1+1;
 mysql> select now();
 ```
 
-Without a semicolon your SQL statement continues on the next line, as denoted by `->`.  The SQL is not executed until you provide the `;`.
+Without a semicolon your SQL statement continues on the next line, as denoted by `->`.  The SQL is not executed until you provide the `;` followed by the enter key.
 
 ```
 mysql> select
@@ -61,5 +74,3 @@ mysql> select
     -> now()
     -> \c
 ```
-
-## TODO: Creating a MySQL connection with Workbench
