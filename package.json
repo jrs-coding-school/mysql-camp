@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/jrs-innovation-center/bootcamp-mysql#readme",
   "dependencies": {
-    "codecampkit": "2.3.5"
+    "codecampkit": "^2.3.5"
   }
 }

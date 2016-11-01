@@ -24,13 +24,13 @@ When a room is booked, what do we want to track in the reservation?  The reserva
 
 ## Creating Tables and Data types
 
-In a relational data model you describe data in the form of tables. Each table contains rows.  It’s very similar to a page in a spreadsheet with each spreadsheet page being similar to a single table.  Each row within the table represents a thing of interest or entity.  For example, a Customer table would hold rows of data with each row describing a single customer. The entity is described by its attributes which translate to columns in the table. Each column contains a single value. A Customer table may contain columns such as CustomerID, LastName, FirstName, Gender, and BirthDate.  
+In a relational data model you describe data in the form of tables. Each table contains rows.  It’s very similar to a page in a spreadsheet with each spreadsheet page being similar to a single table.  Each row within the table represents a thing of interest or entity.  For example, a Customer table would hold rows of data with each row describing a single customer. The entity is described by its attributes which translate to columns in the table. Each column contains a single value. A **Customer** table may contain columns such as **CustomerID, LastName, FirstName, Gender, and BirthDate**.  
 
 ![Simple Table](/static/assets/img/simple-table.png)
 
-A relational database allows you to formally relate tables to one another.  For example, an Orders table could be related to the Customer table.  We could express this relationship verbally by stating “One customer can place one to many Orders”.  Another way to say this would be “A single order is related to a single customer”.  
+A relational database allows you to formally relate tables to one another.  For example, an **Orders** table could be related to the **Customer** table.  We could express this relationship verbally by stating “One customer can place one to many Orders”.  Another way to say this would be “A single order is related to a single customer”.  
 
-In order to relate the two tables together. we refer a column in a table to a column within the other table. Below we see the Orders table. See how we copy over the CustomerID from the Customer table to the Orders table?  This begins to establish the relationship between the two tables.
+In order to relate the two tables together. we refer a column in a table to a column within the other table. Below we see the **Orders** table. See how we copy over the **CustomerID** from the **Customer** table to the **Orders** table?  This begins to establish the relationship between the two tables.
 
 ![Relationship](/static/assets/img/simple-table-relationship.png)
 
@@ -40,10 +40,9 @@ Below is some sample data from Customer and Orders.  Again, note the CustomerID 
 
 ## All about the rows
 
-A large portion of the Structured Query Language (SQL) deals with columns and rows from tables.  You can `INSERT` rows using SQL.  You retrieve (`SELECT`) rows with SQL.  You edit (`UPDATE`) rows with SQL.  You `DELETE` rows with SQL.  Get the picture?  The values returned by a `SELECT` SQL statement are a set of columns and rows.  In the relational model you can think of these operations as operating on and returning rows of data.  You can create a query that consists of a `SELECT` SQL statement to count up all the customers by state.  You can give the query a name such as **vCustomerCountByState**.  We call this type of database object a _View_.  
+A large portion of the Structured Query Language (SQL) deals with managing the information stored within the columns and rows of database tables.  You can `INSERT` rows using SQL.  You retrieve (`SELECT`) rows with SQL.  You edit (`UPDATE`) rows with SQL.  You `DELETE` rows with SQL.  Get the picture?  The values returned by a `SELECT` SQL statement are a set of columns and rows.  In the relational model you can think of these operations as operating on and returning rows of data.  You can create a query that consists of a `SELECT` SQL statement to count up all the customers by state.  You can give the query a name such as **vCustomerCountByState**.  We call this type of database object a _View_.  A view is virtual table in that it contains rows of data (relation).
 
-A view is virtual table in that it contains rows of data or a relation.
-In a relational database system, we will have to define the structure of our tables first.  This is known as defining a schema.  It is assumed the data structure is known ahead of time.  This is common across all different types of RDMBS like SQL Server, MySQL, Oracle, etc.  
+In a relational database system, we will have to define the structure of our tables first.  This is known as defining a _schema_.  It is assumed the data structure is known ahead of time.  This is common across all different types of RDMBS like SQL Server, MySQL, Oracle, etc.  
 
 > Remember that NoSQL databases operate _without_ a schema, allowing you to freely add fields to database records without having to define a structure ahead of time.  This is helpful when you can’t assume the structure of your data ahead of time.  Many newer applications which are designed today use a mixture of both relational and NoSQL technologies.  
 
@@ -71,7 +70,7 @@ For example, a person’s first name would be a string.  A person’s last name 
 - 	Choosing the correct type to store your data is crucial to getting good performance (Schwartz, Zaitsev, & Tkachenko, 2012)
 - 	Use the smallest data type that can correctly store and represent your data
 - 	Choose the smallest one that you don’t think you’ll exceed
-- 	Smaller data types are usually faster, because they use less space on the disk, in memory, and in the CPU cache .
+- 	Smaller data types are usually faster, because they use less space on the disk, in memory, and in the CPU cache.
 - 	Fewer CPU cycles to process
 
 [Demo: CREATE TABLE](/4-create-table/demo-create-table)
@@ -80,7 +79,23 @@ For example, a person’s first name would be a string.  A person’s last name 
 
 Sometimes it is ok to have an unknown or missing value within a column in a table.  Sometimes it isn’t.  When a column is marked at `NOT NULL`, we will not be able enter a `NULL` value into the column.  You test for `NULL` values within your tables by using the `IS NULL` and `IS NOT NULL` operators within a `SELECT` statement.
 
-In the `CREATE TABLE` statement in the demo, notice that the `LastName` column was marked with the `NOT NULL` operator.  This means we have to enter a string into this column.  In contrast, the `FirstName` column will allow `NULL`.  
+In the `CREATE TABLE` statement in the demo, notice that the `LastName` column was marked with the `NOT NULL` operator.  This means we have to enter a string into this column.  In contrast, the `FirstName` column will allow `NULL`.
+
+> Go ahead and commit this concept to memory:  “Omitting a value for a column will cause a NULL value to be entered which then causes the default value to be placed into the column.“  
+
+Consider the following SQL which creates a table and inserts a row into the table using a default.
+
+```
+CREATE TABLE RockStar.Individual
+         (LastName varchar(50) NOT NULL
+         , FirstName varchar(25)
+         , BirthDate DATE NOT NULL
+         , DateAdded TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+INSERT INTO Individual (LastName, FirstName, BirthDate) VALUES (‘Jagger’, ‘Mick’, ‘1943-07-26’);
+```
+
+> Note the syntax for the second example above.  When a column is not used in the list of columns, a default is assigned such as NULL.  If a column does not allow NULLs and you don’t specify the column in the column list, and the column does not have a default declared when you created the table then _you will get an error_!
 
 ## Date and Time Data Types
 
