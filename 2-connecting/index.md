@@ -1,3 +1,6 @@
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/)  
+---
+
 # Connecting to MySQL
 
 ## Connecting to the database server
