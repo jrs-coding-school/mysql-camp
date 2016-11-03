@@ -1,5 +1,5 @@
 {
-  "name": "mysql",
+  "name": "mysql-camp",
   "version": "1.0.0",
   "description": "Curriculum for mysql portion of JRS Coding School Boot Camp.",
   "main": "index.js",

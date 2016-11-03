@@ -91,3 +91,6 @@ Let’s look at some sample data for the tables listed above.  Below, notice how
 ![one to many ERD](/static/assets/img/many-to-many-example2.png)
 
 [Exercise 2](/8-relationships/2)
+
+
+[Relationships](/8-relationships/)  |  [Next](/8-relationships/1) 
