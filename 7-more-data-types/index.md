@@ -27,3 +27,5 @@ CREATE TABLE DrinkMenu (
 ## BOOL, BOOLEAN, TINYINT(1) data types
 
 There is not an exact way to represent True or False in MySQL.  You can get close, however.  The `BOOL`, `BOOLEAN`, `TINYINT(1)` data types are ways to implement a true/false value within a table column.  Each column can store a 0 for false or a 1 for true. … well sort of.  `BOOL` and `BOOLEAN` get translated to `TINYINT(1)` which will store a very small integer value with a signed range is -128 to 127 . The unsigned range is 0 to 255.   So if you have a 0 in the column, your application can interpret this as False and anything else as True.  
+
+[Home](/)  |  [More Data Types](/8-relationships/)  |  [Next](/8-relationships/1) 

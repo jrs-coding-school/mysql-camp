@@ -25,4 +25,4 @@ Let’s say we want to list the tallest players by team; but, the listing should
 
 
 
-[Home](/)  |  [Order By](/11-order-by/)  |  [Next](/11-order-by/1) 
+[Home](/)  |  [SQL Intro](/10-joins/)  |  [Next](/10-joins/1)

@@ -20,3 +20,5 @@ ALTER TABLE table_name action [, action] …;
 ```
 
 So, with `ALTER TABLE` you should include at least one action but have the option for additional actions.  Before using the `ALTER TABLE` statement, it’s a good idea to verify its current structure by issuing `SHOW CREATE TABLE` statement.
+
+[Home](/)  |  [Alter Table](/6-alter-table/)  |  [Next](/6-alter-table/1) 

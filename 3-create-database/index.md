@@ -49,3 +49,5 @@ Delete a database named **delete-me** using the `DROP DATABASE` SQL statement:
 ```
 $ DROP DATABASE `delete-me`;
 ```
+
+[Home](/)  |  [Create Database](/3-create-database/)  |  [Next](/3-create-database/1)  

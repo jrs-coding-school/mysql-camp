@@ -111,3 +111,5 @@ For a birth date, you could use a data type of `DATE`.  If you wanted to just st
 
 - [Exercise 1](/4-create-table/1)
 - [Exercise 2](/4-create-table/2)
+
+[Home](/)  |  [Create Table](/4-create-table/)  |  [Next](/4-create-table/1)

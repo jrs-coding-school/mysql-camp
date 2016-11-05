@@ -104,4 +104,4 @@ RIGHT JOIN Team ON Team.ID = Batting.TeamID;
 
 
 
-[Home](/)  |  [SQL Intro](/10-joins/)  |  [Next](/10-joins/1)
+[Home](/)  |  [Joins](/10-joins/)  |  [Next](/10-joins/1)

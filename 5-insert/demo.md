@@ -11,7 +11,8 @@ Now let’s use the `INSERT` statement to add a single rock star into the **Indi
 Enter the following `INSERT` statement and run the query.  Note how the table name is qualified with the database name.  
 
 ```
-mysql> INSERT INTO RockStar.Individual (LastName, FirstName, BirthDate) VALUES (‘Jagger’, ‘Mick’, ‘1943-07-26’);
+mysql> INSERT INTO RockStar.Individual (LastName, FirstName, BirthDate)
+VALUES (‘Jagger’, ‘Mick’, ‘1943-07-26’);
 ```
 
 After you submit the command to the MySQL Server, you should see a message that says ‘Query OK, 1 row affected…’

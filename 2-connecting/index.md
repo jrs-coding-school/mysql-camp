@@ -77,3 +77,5 @@ mysql> select
     -> now()
     -> \c
 ```
+
+[Home](/)  |  [Connecting](/2-connecting/)  |  [Next](/2-connecting/1)

@@ -33,7 +33,4 @@ The statement above will retrieve the **ID** column, **FirstName** column, **Las
 
 > For performance reasons, use only use the least amount of columns in your `SELECT` statement.  It is generally a good idea to refrain from using `*` as this will retrieve all the columns which wastes computing resources like CPU.    
 
-
-
-
 [Home](/)  |  [SQL Intro](/9-sql-intro/)  |  [Next](/9-sql-intro/1)

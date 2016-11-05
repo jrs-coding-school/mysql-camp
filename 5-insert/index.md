@@ -38,7 +38,10 @@ INSERT INTO table_name VALUES (,,,),(,,,),(,,,),…;
 And an example would be:
 
 ```
-INSERT INTO Individual VALUES (‘Jagger’, ‘Mick’, ‘1943-07-26’), (‘Zimmerman’, ‘Robert’, ‘1942-05-25’),(‘Cobain’, ‘Kurt’, ‘1967-02-20’);
+INSERT INTO Individual VALUES
+(‘Jagger’, ‘Mick’, ‘1943-07-26’)
+, (‘Zimmerman’, ‘Robert’, ‘1942-05-25’)
+, (‘Cobain’, ‘Kurt’, ‘1967-02-20’);
 ```
 
 [Demo: CREATE TABLE](/5-insert/demo)
@@ -47,3 +50,5 @@ INSERT INTO Individual VALUES (‘Jagger’, ‘Mick’, ‘1943-07-26’), (‘
 
 - [Exercise 1](/5-insert/1)
 - [Exercise 2](/5-insert/2)
+
+[Home](/)  |  [Insert](/5-insert/)  |  [Next](/5-insert/1)
