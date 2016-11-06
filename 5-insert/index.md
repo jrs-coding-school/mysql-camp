@@ -46,9 +46,5 @@ INSERT INTO Individual VALUES
 
 [Demo: CREATE TABLE](/5-insert/demo)
 
-## Exercises
-
-- [Exercise 1](/5-insert/1)
-- [Exercise 2](/5-insert/2)
 
 [Home](/)  |  [Insert](/5-insert/)  |  [Next](/5-insert/1)

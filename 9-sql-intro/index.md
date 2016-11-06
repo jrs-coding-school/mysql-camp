@@ -1,7 +1,7 @@
 [Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/)  
 ---
 
-# SQL Data Manipulation Statements (DML)
+# SQL Data Manipulation Language (DML)
 
 In our last session we spent a lot of time creating tables and relationships.  You could say we defined the data structures.  There is a technical name for this and it’s called the Data Definition Language (DDL).   We used the DDL portion of the Structured Query Language to define our data structures.  
 
@@ -17,11 +17,11 @@ SELECT * FROM Individual;
 
 The statement above almost reads like English, doesn’t it?  It simply states, `SELECT` for me all the columns `FROM` the **Individual** table.  This SQL statement will retrieve all the rows from the table and all the columns.  The * means return all the columns and since we are not restricting which rows to return, the statement will return all rows.
 
-> Tip:  The SELECT statement is not case sensitive.  So, select * from Individual; works too!
+> Tip:  While table names _are_ case sensitive, clauses in a SQL statement are not.  This means the `SELECT` statement is not case sensitive.  So, `select * from Individual;` works too!
 
 ## The SELECT Clause
 
-So, I guess you noticed the `SELECT` above.  The word ‘SELECT’ in SQL is called a clause and is used to specify the columns to be returned by your query.  Whenever you see the `SELECT` clause, you are retrieving data.  The SQL statement `Select * from Individual;` will return all data from all the columns of the **Individual** table.  
+So, I guess you noticed the `SELECT` above.  The word ‘SELECT’ in SQL is called a clause and is used to specify the columns to be returned by your query.  Whenever you see the `SELECT` clause, you are retrieving data.  
 
 You could also specify which columns to return.  For example, you could author the following:
 
@@ -29,7 +29,7 @@ You could also specify which columns to return.  For example, you could author t
 SELECT ID, FirstName, LastName, BirthDate FROM Individual;
 ```
 
-The statement above will retrieve the **ID** column, **FirstName** column, **LastName** column, and **BirthDate** column `FROM` the `Individual` table.
+The statement above will retrieve the **ID** column, **FirstName** column, **LastName** column, and **BirthDate** column `FROM` the **Individual** table.
 
 > For performance reasons, use only use the least amount of columns in your `SELECT` statement.  It is generally a good idea to refrain from using `*` as this will retrieve all the columns which wastes computing resources like CPU.    
 

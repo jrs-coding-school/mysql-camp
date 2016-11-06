@@ -1,13 +1,13 @@
 [Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/)  
 ---
 
-# More Data Typles
+# More Data Types
 
 ## DECIMAL data type and integers
 
-The value 123.45 is a number, specifically it’s a fixed point number, and in MySQL it’s data type is called `DECIMAL`.  The value 56 is a number; more specifically it’s an integer.  Like t-shirts, integer data types in MySQL come in all sorts of sizes from extra small to extra-large such as TINYINT, SMALLINT, MEDIUMINT, INT, and BIGINT.
+The value 123.45 is a number, specifically it’s a fixed point number, and in MySQL it’s data type is called `DECIMAL`.  The value 56 is a number; more specifically it’s an integer.  Like t-shirts, integer data types in MySQL come in all sorts of sizes from extra small to extra-large such as `TINYINT`, `SMALLINT`, `MEDIUMINT`, `INT`, and `BIGINT`.
 
-> We won’t cover all the different data types in this course.  Instead, I recommend you check out the MySQL reference manuals on the Oracle web site at http://dev.mysql.com/doc/ or get a good book on MySQL such as the MySQL Developer’s Library by Paul DuBois.  
+> We won’t cover all the different data types in this course.  Instead, I recommend you check out the MySQL reference manuals on the Oracle web site at [MySQL](http://dev.mysql.com/doc/) and [MySQL Data Types](http://dev.mysql.com/doc/refman/5.7/en/data-types.html) or get a good book on MySQL such as the [MySQL Developer’s Library](https://www.amazon.com/MySQL-Developers-Library-Paul-DuBois/dp/0321833872) by Paul DuBois.  
 
 ## YEAR data type
 
@@ -28,4 +28,4 @@ CREATE TABLE DrinkMenu (
 
 There is not an exact way to represent True or False in MySQL.  You can get close, however.  The `BOOL`, `BOOLEAN`, `TINYINT(1)` data types are ways to implement a true/false value within a table column.  Each column can store a 0 for false or a 1 for true. … well sort of.  `BOOL` and `BOOLEAN` get translated to `TINYINT(1)` which will store a very small integer value with a signed range is -128 to 127 . The unsigned range is 0 to 255.   So if you have a 0 in the column, your application can interpret this as False and anything else as True.  
 
-[Home](/)  |  [More Data Types](/8-relationships/)  |  [Next](/8-relationships/1) 
+[Home](/)  |  [More Data Types](/7-more-data-types/)  |  [Next](/7-more-data-types/1)

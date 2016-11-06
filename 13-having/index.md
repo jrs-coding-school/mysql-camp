@@ -1,0 +1,21 @@
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/)  
+---
+
+# HAVING Clause
+
+The `HAVING` clause is used to filter the results of a `GROUP BY`.  After records have been aggregated with `GROUP BY` , you can use `HAVING` to filter the aggregated results.
+
+Let’s say you wanted to list all the players from the **vteamRoster** view who bat left handed:
+
+![1](/static/assets/img/having1.png)
+
+Now let’s say you wanted to determine which team had the most lefties. You could `COUNT` the **playerID** column and `GROUP BY` the **teamName** column:
+
+![2](/static/assets/img/having2.png)
+
+Let’s take it one step further with the `HAVING` clause which acts like a `WHERE` clause for data that has been grouped and aggregated.  In the example below, we modified the query by aliasing the `COUNT(PLAYERID)` as `PLAYERCOUNT` and limiting the grouped rows to those who have a `PLAYERCOUNT` greater than 2.
+
+![3](/static/assets/img/having3.png)
+
+
+[Home](/)  |  [Having](/13-having/)  |  [Next](/13-having/1)

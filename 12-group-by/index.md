@@ -1,28 +1,44 @@
 [Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/)  
 ---
 
-# Order By Clause
+# GROUP BY Clause
 
-Use the `ORDER BY` clause to order the results of a query using a listing of columns. The syntax of the order by clause is:
+You can use the `GROUP BY` clause within a `SELECT` statement to group rows together by one or more columns or expressions. The `GROUP BY` clause should appear after the `FROM` clause and the `WHERE` clause but precede the `ORDER BY` clause.  
+
+**You can perform row aggregations (sum, count, average, ...) on the grouped rows.**
+
+The syntax of the `GROUP BY` clause is:
 
 ```
-ORDER BY column_name,column_name ASC|DESC;
+SELECT column1,column2,… <row aggregation function>(column or column expression)
+FROM tableA
+WHERE <where_conditions>
+GROUP BY column1, column2, ...
 ```
 
-`ORDER BY` will sort the rows in ascending order by default.  To sort in descending order use `DESC`.
-Here is an example of using an order by clause within the **baseball** database.  This `SELECT` statement will list all the players by last name:
+For example, let’s say you wanted to list all the teams and their associated batting averages from the **batting** table.  You could author the following `SELECT` statement:
 
-![Order By List Players desc](/static/assets/img/order-by1.png)
+![1](/static/assets/img/group-by1.png)
 
-Here is another example.  This time we use DESC to sort the Birthdate column in descending order.  In this way we can view the youngest players first.
+Now let’s say you wanted to determine which teams had the most players on the list.  You could use the built-in SQL `COUNT()` function to count the rows and group the results by the **teamName** column.
 
-![Order By List Players birthdate desc](/static/assets/img/order-by2.png)
+![2](/static/assets/img/group-by2.png)
 
-Let’s say we want to list the tallest players by team; but, the listing should be ordered by league, division, and team.  The following example will utilize the `ORDER BY` clause on a view named **vTeamRoster** to list players.  In the `ORDER BY` clause below, the **League**, **DivisionName**, and **TeamName** are ordered in _ascending_ order AND the **HeightInches** column is ordered in _descending_ order.
+We can use the `AVG()` function   and a `GROUP BY` clause to determine the batting averages by team:
 
-![Order By List Players height descending](/static/assets/img/order-by3.png)
+![3](/static/assets/img/group-by3.png)
+
+The following query will group the rows by the team name, count the rows for each team, and average the batting averages for each team:
+
+![4](/static/assets/img/group-by4.png)
+
+The query below uses the `MIN()` aggregate function to determine which of the batting leaders had the least number of at bats from the **vbattingleaders** view:
+
+![5](/static/assets/img/group-by5.png)
+
+The following query will determine which teams had the most number of batting leaders.  Note how the `ORDER BY` clause is placed after the `GROUP BY` clause:
+
+![6](/static/assets/img/group-by6.png)
 
 
-
-
-[Home](/)  |  [SQL Intro](/10-joins/)  |  [Next](/10-joins/1)
+[Home](/)  |  [Group By](/12-group-by/)  |  [Next](/12-group-by/1)

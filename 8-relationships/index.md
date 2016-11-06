@@ -10,8 +10,8 @@ Foreign keys allow you to relate data together between two tables.  You create a
 -	The `FOREIGN KEY` clause must be placed on the child table.  
 -	Both tables referenced by the foreign key must be stored within the INNODB database engine.
 -	The two referenced columns must be of the same data type.
--	InnoDB requires indexes on the columns within both tables referenced by the foreign key.
--	Creating a row in the child table will be rejected if there is not a matching value in the parent table.
+-	InnoDB database engine requires indexes on the columns within both tables referenced by the foreign key.
+-	To prevent orphaning of records, creating a row in the child table will be rejected if there is not a matching value in the parent table.
 
 In the example below, we are creating a table named **Automobile** that contains an **ID** column for the primary key and a **Name** column for the name of the car.  Notice also how we explicitly designate the storage engine for the table as InnoDB.  
 
