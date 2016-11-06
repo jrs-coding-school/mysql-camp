@@ -8,3 +8,5 @@ To add a row or rows of data into a table use the `INSERT INTO` statement.  With
 INSERT INTO tablename (Col1, Col2, Col3, ...)
 VALUES (Value1, Value2, Value3, …).
 ```
+
+[Home](/)  |  [SELECT INSERT](/14-selectinsert/)  |  [Next](/14-selectinsert/1)
