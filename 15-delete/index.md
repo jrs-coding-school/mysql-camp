@@ -33,6 +33,6 @@ In summary, the key to using WHERE clauses on DELETE statements is to very preci
 DELETE FROM Individual
 WHERE ID = ‘49’;
 ```
-
+  
 
 [Home](/)  |  [DELETE](/15-delete/)  |  [Next](/15-delete/1)

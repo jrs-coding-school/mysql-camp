@@ -23,6 +23,4 @@ To get around this limitation you can `set SQL_SAFE_UPDATES to 0;`:
 ![2](/static/assets/img/update2.png)
 
 
-
-
 [Home](/)  |  [Update](/16-update/)  |  [Next](/16-update/1)
