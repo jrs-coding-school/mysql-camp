@@ -41,10 +41,4 @@ FROM Band;
 
 
 
-
-
-
-![2](/static/assets/img/distinct2.png)
-
-
 [Home](/)  |  [Distinct](/17-distinct/)  |  [Next](/17-distinct/1)
