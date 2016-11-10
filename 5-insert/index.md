@@ -1,3 +1,6 @@
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/) 
+---
+
 # INSERT Statements Add Rows to a Table
 
 Use SQL statements to manipulate the data within tables.  The `INSERT` statement adds a row or rows of data into a table.  The statement begins with the keywords `INSERT INTO` followed by the name of the table followed by `VALUES` followed by a series of column names.  With this syntax, the values must contain a value for each column.  And the values should be in the order in which you created the table:  
