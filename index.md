@@ -18,13 +18,13 @@ In this course we will define how a database is organized using a relational mod
 
 ## MySQL _Client_ Software Connects and interacts with the MySQL database _server_
 
-### MySQL Workbench
+### MySQL Workbench _Client_
 
 MySQL Workbench is a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single development environment.
 
 ![clients workbench](/static/assets/img/sql-clients-1workbench.png)
 
-## mysql — The MySQL Command-Line Tool
+## mysql — The MySQL Command-Line Tool _client_
 
 "mysql is a simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. When used noninteractively (for example, as a filter), the result is presented in tab-separated format. The output format can be changed using command options." - mysql docs.
 
