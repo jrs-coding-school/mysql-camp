@@ -1,4 +1,4 @@
-[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/) 
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/)
 ---
 
 # Foreign Keys: Relating Tables Together
@@ -13,33 +13,33 @@ Foreign keys allow you to relate data together between two tables.  You create a
 -	InnoDB database engine requires indexes on the columns within both tables referenced by the foreign key.
 -	To prevent orphaning of records, creating a row in the child table will be rejected if there is not a matching value in the parent table.
 
-In the example below, we are creating a table named **Automobile** that contains an **ID** column for the primary key and a **Name** column for the name of the car.  Notice also how we explicitly designate the storage engine for the table as InnoDB.  
+In the example below, we are creating a table named **automobile** that contains an **ID** column for the primary key and a **Name** column for the name of the car.  Notice also how we explicitly designate the storage engine for the table as InnoDB.  
 
 ```
-CREATE TABLE Automobile (
+CREATE TABLE automobile (
 ID INT NOT NULL
-, NAME VARCHAR(25) NOT NULL
+, name VARCHAR(25) NOT NULL
 , PRIMARY KEY (ID)
 ) ENGINE=INNODB;
 ```
 
-Next we create a child table named **Engine** which tracks the engine options available for the **Automobile**.  We use an **ID** column for the primary key, and an **AutomobileID** as the column that supports the foreign key which references the parent **Automobile** table’s **ID** column.   Note the index created on the **AutomobileID** column in the child **Engine** table.  Remember in both tables, the columns involved in the foreign key relationship in each table require coverage with an index.  The parent **Automobile** table received an index on its **ID** column when we designated this column as the primary key.  
+Next we create a child table named **engine** which tracks the engine options available for the **automobile**.  We use an **ID** column for the primary key, and an **automobileID** as the column that supports the foreign key which references the parent **automobile** table’s **ID** column.   Note the index created on the **automobileID** column in the child **engine** table.  Remember in both tables, the columns involved in the foreign key relationship in each table require coverage with an index.  The parent **automobile** table received an index on its **ID** column when we designated this column as the primary key.  
 
 ```
-CREATE TABLE Engine
+CREATE TABLE engine
 (ID INT NOT NULL
-, AutomobileID INT NOT NULL
-, EngineSize DECIMAL (2,1) NOT NULL
-,INDEX AutomobileID_idx (AutomobileID),
-FOREIGN KEY (AutomobileID) REFERENCES Automobile(ID)
+, automobileID INT NOT NULL
+, engineSize DECIMAL (2,1) NOT NULL
+,INDEX automobileID_idx (automobileID),
+FOREIGN KEY (automobileID) REFERENCES automobile(ID)
                       ON DELETE CASCADE
 ) ENGINE=INNODB;
 ```
 
-Looking back at the `CREATE TABLE` statement for the **Engine** table we can see the following pieces involved with creating a foreign key.
--	Created a column in the child table with the same data type as the column in the parent table.  In the **Engine** table we created the **AutomobileID** column.
--	Created an index in the child table on the column that supports the foreign key.  In the statement above, we created an index named **AutomobileID_idx**.
--	Created a `FOREIGN KEY` clause that first references the column in the child table (**AutomobileID**) followed by `REFERENCES` statement followed by the parent table name (**Automobile**) followed by the column in the parent table (**ID**).  
+Looking back at the `CREATE TABLE` statement for the **engine** table we can see the following pieces involved with creating a foreign key.
+-	Created a column in the child table with the same data type as the column in the parent table.  In the **engine** table we created the **automobileID** column.
+-	Created an index in the child table on the column that supports the foreign key.  In the statement above, we created an index named **automobileID_idx**.
+-	Created a `FOREIGN KEY` clause that first references the column in the child table (**automobileID**) followed by `REFERENCES` statement followed by the parent table name (**automobile**) followed by the column in the parent table (**ID**).  
 -	Optionally, you can specify what happens when a row either deleted or updated on the parent table by specifying `ON DELETE` and `ON UPDATE`.  Use either `ON DELETE` or `ON UPDATE` with one of the following options:
   -	`CASCADE`: deleting or updating a parent id row on the parent cascades the action down to the matching rows within the child table.  Updating a parent id causes matching rows to be updated with the same value in the child table.  Deleting a parent row causes matching rows to be deleted in the child table.
   - `SET NULL`: set the foreign key child column to null.  If you use this option be sure that you have not designated the foreign key child column as `NOT NULL`.

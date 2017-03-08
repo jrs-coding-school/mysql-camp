@@ -1,4 +1,4 @@
-[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/) 
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/)
 ---
 
 # SQL Data Manipulation Language (DML)
@@ -12,12 +12,12 @@ There is more than just building tables.  Using SQL you can retrieve data and ev
 The `SELECT` statement is used to retrieve data from the database. Take the following `SELECT` statement as an example:
 
 ```
-SELECT * FROM Individual;
+SELECT * FROM individual;
 ```
 
-The statement above almost reads like English, doesn’t it?  It simply states, `SELECT` for me all the columns `FROM` the **Individual** table.  This SQL statement will retrieve all the rows from the table and all the columns.  The * means return all the columns and since we are not restricting which rows to return, the statement will return all rows.
+The statement above almost reads like English, doesn’t it?  It simply states, `SELECT` for me all the columns `FROM` the **individual** table.  This SQL statement will retrieve all the rows from the table and all the columns.  The * means return all the columns and since we are not restricting which rows to return, the statement will return all rows.
 
-> Tip:  While table names _are_ case sensitive, clauses in a SQL statement are not.  This means the `SELECT` statement is not case sensitive.  So, `select * from Individual;` works too!
+> Tip:  While table names _are_ case sensitive, clauses in a SQL statement are not.  This means the `SELECT` statement is not case sensitive.  So, `SELECT * from individual;` works too!
 
 ## The SELECT Clause
 
@@ -26,10 +26,10 @@ So, I guess you noticed the `SELECT` above.  The word ‘SELECT’ in SQL is cal
 You could also specify which columns to return.  For example, you could author the following:
 
 ```
-SELECT ID, FirstName, LastName, BirthDate FROM Individual;
+SELECT ID, firstName, lastName, birthDate FROM individual;
 ```
 
-The statement above will retrieve the **ID** column, **FirstName** column, **LastName** column, and **BirthDate** column `FROM` the **Individual** table.
+The statement above will retrieve the **ID** column, **firstName** column, **lastName** column, and **birthDate** column `FROM` the **individual** table.
 
 > For performance reasons, use only use the least amount of columns in your `SELECT` statement.  It is generally a good idea to refrain from using `*` as this will retrieve all the columns which wastes computing resources like CPU.    
 
