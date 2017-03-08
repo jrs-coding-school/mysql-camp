@@ -49,7 +49,7 @@ And here's a fourth way to insert into a table using `SET`.
 INSERT INTO individual SET lastName='Morrison', firstName='Jim', birthDate='1940-05-01';   
 ```
 
-[Demo: CREATE TABLE](/5-insert/demo)
+[Demo: DESCRIBE lists a Table’s Structure](/5-insert/demo)
 
 
 [Home](/)  |  [Insert](/5-insert/)  |  [Next](/5-insert/1)
