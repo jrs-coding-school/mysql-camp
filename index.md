@@ -15,9 +15,34 @@ In this course we will define how a database is organized using a relational mod
 - MySQL supports many different categories of data types from integers to floating numbers to characters to binary to dates and times, to name a few.  See [Data Types](http://dev.mysql.com/doc/refman/5.7/en/data-types.html).
 - MySQL consists of the main database server/engine and includes clients and utility programs. We use the client utility programs to communicate with the database server/engine including **mysql** command line interface and **MySQL Workbench**, the graphical user interface to MySQL.  
 
+
+## MySQL _Client_ Software Connects and interacts with the MySQL database _server_
+
+### MySQL Workbench
+
+MySQL Workbench is a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single development environment.
+
+![clients workbench](/static/assets/img/sql-clients-1workbench.png)
+
+## mysql — The MySQL Command-Line Tool
+
+"mysql is a simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. When used noninteractively (for example, as a filter), the result is presented in tab-separated format. The output format can be changed using command options." - mysql docs.
+
+[mysql cli](https://dev.mysql.com/doc/refman/5.5/en/mysql.html)
+
+#### mysql cli - Connecting to the MySql server and database
+
+```
+$ mysql --user=user_name --password=your_password db_name
+```
+
+#### mysql cli - Killing statements
+
+Typing **Control+C** causes mysql to attempt to kill the current statement. If this cannot be done, or **Control+C** is typed again before the statement is killed, mysql exits.
+
 ## Installing MySQL engine/server
 
-We will use [Docker](https://docs.docker.com/engine/understanding-docker/) as the mechanism to install the MySQL _database engine_.  Docker is an open platform for developing, shipping, and running applications.
+We will use [Docker](https://docs.docker.com/engine/understanding-docker/) as the mechanism to install the MySQL _database server engine_.  Docker is an open platform for developing, shipping, and running applications.
 
 - Before you can install the MySQL database server, you will need to install the Docker engine.  Follow these instructions for your specific operating system:
 

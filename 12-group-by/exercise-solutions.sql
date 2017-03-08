@@ -2,7 +2,8 @@ USE baseball;
 
 Select * from vteamRoster
 
-/* Query 1  Retrieve all the columns from the **vteamRoster** view for only the batting leaders. */
+/* Query 1  Retrieve all the columns from the **vteamRoster** view
+for only the batting leaders. */
 SELECT v.*
 FROM vteamRoster v
 INNER JOIN batting b on b.playerID = v.playerID
