@@ -1,4 +1,4 @@
-[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/) 
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/)
 ---
 
 # Connecting to MySQL
@@ -30,10 +30,9 @@ Enter password: ********
 - `--user`, `–u` MySQL user name to use when connecting to server.  If using Unix this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the `–u` option.  For now you will probably want to use the `root` superuser.  
 
 
+> Some accounts have the user name `root`. These are superuser accounts that have all privileges and can do anything. When you install MySQL you will be provided with a temporary password for the `root` user.
 
-    > Some accounts have the user name `root`. These are superuser accounts that have all privileges and can do anything. When you install MySQL you will be provided with a temporary password for the `root` user.
-
-    > If using Unix, this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the –u option.  
+> If using Unix, this is the same as the Unix login name.  If you want to use the Unix login name as the user name, you can omit the –u option.  
 
 - `--password`, `–p` you could provide the password directly as part of the command (be careful! no spaces after –p) BUT for security purpose don’t do this.  By not providing the value for the password, **mysql** will prompt you for the password without echoing the password to the screen.
 
