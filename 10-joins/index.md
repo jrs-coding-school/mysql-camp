@@ -1,4 +1,4 @@
-[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/) 
+[Home](/) | [Connecting](/2-connecting/) | [Create Database](/3-create-database/) | [Create Tables](/4-create-table/) | [INSERT](/5-insert/) | [Alter Table](/6-alter-table/) | [More Data Types](/7-more-data-types/) | [Relationships](/8-relationships/) | [SQL Intro](/9-sql-intro/) | [Joins](/10-joins/) | [Order By](/11-order-by/) | [Group By](/12-group-by/) | [Having](/13-having/)  | [Select Insert](/14-selectinsert/) | [Delete](/15-delete/) | [Updates](/16-updates/) | [Distict](/17-distinct/) | [Aliases](/18-aliases/)
 ---
 
 # Joins
@@ -15,7 +15,7 @@ And here is the batting table.  Note the values in the **TeamID** column:
 
 ![Batting query result](/static/assets/img/joins-batting-query-result.png)
 
-Did you notice that the values within the **batting** table's **TeamID** column match the columns within the **team**  table's **ID** column?  You can join these two tables using a `SELECT` statement with an `INNER JOIN` clause to discover the teams for the batting leaders by joining the `team.ID` column with the `batting.TeamID` column.  The query will only return rows where the Team IDs match as represented by the overlap (green area) within the two circles.  If we were to draw a picture it would look like this.  
+Did you notice that the values within the **batting** table's **TeamID** column match the columns within the **team** table's **ID** column?  You can join these two tables using a `SELECT` statement with an `INNER JOIN` clause to discover the teams for the batting leaders by joining the `team.ID` column with the `batting.TeamID` column.  The query will only return rows where the Team IDs match as represented by the overlap (green area) within the two circles.  If we were to draw a picture it would look like this.  
 
 ![Inner Join Venn Diagram](/static/assets/img/joins-inner-venn-diagram.png)
 
