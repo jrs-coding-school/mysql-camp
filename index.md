@@ -3,11 +3,23 @@
 
 # MySQL Camp
 
+## Learning Objectives
+
+In this course we will:  
+
+- Define how a database is organized using a relational model.  
+- Discuss the advantages of a relational database management system (RDBMS).  
+- Explain the basics behind using SQL to manipulate data.  
+- Provide an overview of the various MySQL components including
+  - MySQL database server
+  - SQL Workbench client
+  - mysql console application/client
+- Use the mysql console application  to connect to the MySQL database server and immediately begin creating databases, building tables, and working with data types.
+
 ## Introduction
 
-In this course we will define how a database is organized using a relational model.  We will discuss the advantages of a relational database management system (RDBMS).  We will explain the basics behind using SQL to manipulate data.  An overview of the various MySQL components will be provided including the MySQL server, SQL Workbench, and the mysql console application. We will learn about how to use a terminal application to connect to the MySQL database server and immediately begin creating databases, building tables, and working with data types.
-
 - MySQL is an open source SQL database management system, supported by Oracle. You can download it and use it for free.
+- A MySQL database server contains many databases.  Each database contains many tables.  Each table contains many rows which hold the data for an application.
 - A database contains structured data.  The data is stored in separate tables.  The data in one tables may have a formal relationship to some data in another table.
 - You can establish the rules around the relationships between two tables. The database will enforce these rules to help prevent inconsistent, duplicate, missing information.
 - Example:  A row of data within the **person** table can have 0, 1 or several corresponding phone numbers in the **phone** table. If you have a record in the **phone** table than you must have a corresponding record for the person in the **person** table.
